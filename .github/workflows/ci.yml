@@ -1,1 +1,21 @@
+
 ## Developer Operations |  101562530 NANDNI
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "CI is working successfully!"
+         b3fe0152acb9901849c349f1e60c63d46dc591e0
